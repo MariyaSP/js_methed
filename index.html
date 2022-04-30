@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRM</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+    <div class="modal__win">
+        <div class="modal__win-close">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2 2L22 22" stroke="#6E6893" stroke-width="3" stroke-linecap="round"/>
+                <path d="M2 22L22 2" stroke="#6E6893" stroke-width="3" stroke-linecap="round"/>
+                </svg>
+        </div>
+        <h2>Добавить ТОВАР</h2>
+        <div class="modal__win-line"></div>
+        <form action="">
+            <div class="modal__win-form">
+                <div class="form__input nameProduct">
+                    <label for="nameProduct">Наимнование</label>                        
+                    <input type="text" id="nameProduct" name="nameProduct">
+                </div>
+                <div class="form__input categoryProduct">
+                    <label for="categoryProduct">Категория</label>                        
+                    <input type="text" id="categoryProduct" name="categoryProduct">
+                </div>
+                <div class="form__input units">
+                    <label for="units">единицы измерения</label>                        
+                    <input type="text" id="units" name="units">
+                </div>
+                <div class="form__input discont">
+                    <label for="discont">Дисконт</label> 
+                    <div>
+                        <input type="checkbox" name="discont" id="discont">                     
+                        <input type="text" id="discont" name="discont">
+                    </div>  
+
+                </div>
+                <div class="form__input description">
+                    
+                    <label for="description">Описание</label>         
+                    <textarea name="description" id="description" cols="23" rows="10"></textarea>               
+                    
+                </div>
+                <div class="form__input count">
+                    <label for="count">количество</label>                        
+                    <input type="text" id="count" name="count">
+                </div>
+                <div class="form__input price">
+                    <label for="price">Цена</label>                        
+                    <input type="text" id="price" name="price">
+                </div>
+                <input type="button" value="Добавить изображение">
+            </div>
+            <div class="summ__price">
+                <div>
+                    <p class="summ__price-text"> Итоговая стоимость: </p>
+                    <p class="summ__price-value">$ 900.00</p>
+                </div>
+
+                <input type="submit" value="Добавить товар">
+            </div>
+            
+        </form>
+
+    </div>
+</body>
+</html>
