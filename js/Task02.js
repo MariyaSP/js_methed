@@ -1,7 +1,13 @@
-const  getString = (text) => {
-    console.log(text.slice(0, 1).toUpperCase() + text.slice(1).toLowerCase());
+'use strict'
+const isPrime = (num) => {
+    for (let i = 2; i < num; i++) {
+        if (num % i === 0) {
+            alert('Число не простое');
+            return;
+        }
+    }
+    alert('Число простое');
 }
 
-const text = prompt('Введите исходную строку');
-getString(text);
-
+const number = +prompt('Введите число');
+isPrime(number);

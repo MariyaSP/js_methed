@@ -1,13 +1,13 @@
-'use strict';
+'use strict'
 
-const  getSumma = (summa, dol, rub) => {
-    console.log(typeof(dol));
-    const calc = (summa * dol) * rub;
-    return `Стоимость покупки в рублях: ${calc.toFixed(2)}`
+const getСalc = () => {
+    for (let i = 1; i <= 10; i++) {
+
+        for (let j = 1; j <= 10; j++) {
+            console.log(`${i} ^ ${j} = ${i ** j}`);
+        }
+        console.log('----------');
+    }
 }
 
-const summa = +prompt('Введите стоимость покупки в евро');
-const dol = 1.2;
-const rub = 73;
-
-alert(getSumma(summa, dol, rub));
+getСalc();
