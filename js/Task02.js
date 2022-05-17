@@ -1,10 +1,17 @@
-'use strict';
-const allCashbox = [4500, 3210, 650, 1250, 7830, 990, 13900, 370];
+const count = +prompt('введите количество элементов');
+const n = +prompt('введите начальное значение интревала');
+const m = +prompt('введите конечное значение интревала');
 
-const getAverageValue = (arr) => {
-    
-    console.log(Math.floor(arr.reduce((prevValue, currValue) => prevValue + currValue) / arr.length));
-};
+const arr = [];
 
+console.log(`наши числа н =${n} м = ${m}`);
 
-getAverageValue(allCashbox);
+const randomArr = (count, min, max) =>{
+
+    for(let i = 0; i < count; i++){
+        arr.push (Math.floor(Math.random() * (Math.max(min, max) - Math.min(min, max) + 1)) + Math.min(min, max));
+    }
+    console.log(arr);
+}
+
+randomArr(count, n, m);

@@ -1,15 +1,11 @@
-'use strict';
-const allStudents = ['Иванов', 'Петров', 'Сидоров', 'Кузнецов', 'Смирнов', 'Попов', 'Соколов'],
-studentsFailed = ['Сидоров', 'Смирнов', 'Попов'];
+const count = +prompt('введите количество элементов');
+const arr = [];
 
-let success = [];
-const filter = (all, failed) =>{
-    all.forEach(elem => {
-        if(!failed.includes(elem)){
-            success.push(elem)
-        }
-    });
-    console.log(`Студенты, которые смогли: ${success}`);
+const randomArr = (count) =>{
+    for(let i = 0; i<count; i++){
+        arr.push(Math.floor(100 * Math.random() + 1));
+    }
+    console.log(arr);
 }
 
-filter(allStudents, studentsFailed);
+randomArr(count);

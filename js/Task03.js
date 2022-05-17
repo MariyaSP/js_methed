@@ -1,15 +1,33 @@
-'use strict';
+const count = +prompt('введите количество элементов');
+const n = +prompt('введите начальное значение интревала');
+const m = +prompt('введите конечное значение интревала');
+const str = 'odd';
+let item;
 
-const names= ['Noah', 'Liam', 'Mason', 'Jacob', 'Robot', 'William', 'Ethan', 'Michael', 'Alexander'];
+const arr = [];
 
-const addPrefix = (name, pref) =>{
+console.log(`наши числа н =${n} м = ${m}`);
 
-    name.forEach((elem, i) => {
-        name[i] = `${pref} ${elem}`;
+const randomArr = (count, min, max, flag) =>{
+
+    for(let i = 0; i < count; i++){
+
+        if(flag === 'even'){
+            do{
+                item = Math.floor(Math.random() * ((Math.max(min, max) - Math.min(min, max)) + 1)) + Math.min(min, max);
+            }
+            while(item % 2 === 0)
+        }
+        else{
+            do{
+                item = Math.floor(Math.random() * (Math.max(min, max) - Math.min(min, max) + 1)) + Math.min(min, max);
+            }
+            while(item % 2 !== 0 )
+        }
         
-    });
-    console.log(name);
-    
-}; 
+        arr.push(item);
+    }
+    console.log(arr);
+}
 
-addPrefix(names, 'Mr')
+randomArr(count, n, m, str);
