@@ -1,2 +1,6 @@
-console.log(Array.from(new Set(listIPv4)).length);
+const unicIp = (arrayIp) =>{
+  return Array.from(new Set(arrayIp)).length;
+}
+
+console.log(unicIp(listIPv4));
 
