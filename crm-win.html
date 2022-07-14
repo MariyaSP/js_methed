@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRM</title>
+    <link rel="stylesheet" href="css/style.css">
+<!--    <script src="js/main.js" defer></script>-->
+<!--    <script src="js/einstein.js" defer></script>-->
+  <script src="js/cart.js"></script>
+  <script src="js/ipv4.js"></script>
+  <script src="js/ip.js"></script>
+
+</head>
+<body>
+     <div class="modal__win">
+            <div class="modal__win-close">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2 2L22 22" stroke="#6E6893" stroke-width="3" stroke-linecap="round"/>
+                <path d="M2 22L22 2" stroke="#6E6893" stroke-width="3" stroke-linecap="round"/>
+                </svg>
+        </div>
+      <div class="header__win">
+        <h2 class = "add__product">Добавить ТОВАР</h2>
+        <h2 class = "edit__product">Изменить ТОВАР</h2>
+        <div class="edit__info">
+          <p class = "product__id">id: 201910241</p>
+          <img src="img/edit.svg" alt="редактирование">
+        </div>
+      </div>
+        <div class="modal__win-line"></div>
+        <form action="">
+            <div class="modal__win-form">
+                <div class="form__input nameProduct">
+                    <label for="nameProduct">Наимнование</label>
+                    <input type="text" id="nameProduct" name="nameProduct">
+                </div>
+                <div class="form__input categoryProduct">
+                    <label for="categoryProduct">Категория</label>
+                    <input type="text" id="categoryProduct" name="categoryProduct">
+                </div>
+                <div class="form__input units">
+                    <label for="units">единицы измерения</label>
+                    <input type="text" id="units" name="units">
+                </div>
+                <div class="form__input discont">
+                    <label for="discont">Дисконт</label>
+                    <div>
+                        <input type="checkbox" name="discont" id="discont">
+                        <input type="text" id="discont" name="discont">
+                    </div>
+
+                </div>
+                <div class="form__input description">
+
+                    <label for="description">Описание</label>
+                    <textarea name="description" id="description" cols="23" rows="10"></textarea>
+
+                </div>
+                <div class="form__input count">
+                    <label for="count">количество</label>
+                    <input type="text" id="count" name="count">
+                </div>
+                <div class="form__input price">
+                    <label for="price">Цена</label>
+                    <input type="text" id="price" name="price">
+                </div>
+              <div class="form__input error">
+                <p>Изображение не должно превышать размер 1 Мб</p>
+              </div>
+                <input type="button" value="Добавить изображение">
+              <img class = "product__img" src="img/product/1.jpg" alt="товар">
+            </div>
+
+            <div class="summ__price">
+                <div>
+                    <p class="summ__price-text"> Итоговая стоимость: </p>
+                    <p class="summ__price-value">$ 900.00</p>
+                </div>
+
+                <input type="submit" value="Добавить товар">
+            </div>
+
+        </form>
+
+    </div>
+    <div class="win__error">
+      <div class="modal__win-close ">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M2 2L22 22" stroke="#6E6893" stroke-width="3" stroke-linecap="round"/>
+          <path d="M2 22L22 2" stroke="#6E6893" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <img class="error__img" src="img/error.svg" alt="ошибка">
+      <div class="error__maessage">Что-то пошло не так</div>
+    </div>
+</body>
+</html>
