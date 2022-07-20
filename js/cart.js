@@ -1,8 +1,14 @@
 'use strict';
 const cart = {
   items: [],
+  discount: 0,
   get totalPrice() {
     return this.calculateItemPrice();
+  },
+  set setDiscount(promocode) {
+    if(promocode === "METHED") this.discount = 15;
+    if(promocode === "NEWYEAR") this.discount = 21;
+
   },
   count: 0,
   add(itemName, itemPrice, itemCount = 1) {
@@ -20,7 +26,7 @@ const cart = {
       total += this.items[key].count * this.items[key].price;
       this.increaseCount(this.items[key].count);
     }
-    return total;
+    return (total - (total * (this.discount / 100)));
   },
   clear() {
     this.items = [];
@@ -35,4 +41,5 @@ cart.add('велосипед', 23000, 9);
 cart.add('самокат', 15000, 5);
 cart.add('скейт', 5000, 2);
 cart.add('электросамокат', 150000, 1);
+cart.setDiscount = "NEWYEAR";
 cart.print();
